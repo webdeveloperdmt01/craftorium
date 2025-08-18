@@ -3,7 +3,7 @@ import heroBg from "@/assets/images/craftorium-hero-img.webp";
 export default function HeroSection() {
   return (
     <section
-      className="relative w-full pt-32 md:pt-36 lg:pt-44 pb-18 bg-cover bg-center flex items-center justify-center"
+      className="relative w-full pt-32 md:pt-36 lg:pt-54 pb-18 bg-cover bg-center flex items-center justify-center"
       style={{ backgroundImage: `url(${heroBg})` }}
     >
       <div className="absolute inset-0 bg-black/40"></div>

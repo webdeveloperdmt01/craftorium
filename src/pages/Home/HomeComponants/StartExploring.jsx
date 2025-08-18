@@ -3,7 +3,7 @@ import StrartExp from "@/assets/images/StartExploring.webp";
 
 const StartExploring = () => {
   return (
-    <section className="relative w-full h-[70vh] md:h-[60vh] lg:h-[70vh] flex items-center justify-center text-center text-white">
+    <section className="relative w-full h-[60vh] md:h-[60vh] lg:h-[70vh] flex items-center justify-center text-center text-white">
       <img
         src={StrartExp}
         alt="Hero Background"
