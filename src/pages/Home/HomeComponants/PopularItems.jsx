@@ -20,16 +20,16 @@ const products = [
   return (
     <section className="px-4 md:px-8 lg:px-16 xl:px-24 pt-4 md:pt-10 pb-16 bg-white">
       <div className="text-center mb-6 md:mb-10">
-        <h2 className="text-[var(--text-hover-clr)] text-2xl md:text-3xl lg:text-4xl font-medium">
+        <h2 className="font-cormorant text-[var(--text-hover-clr)] text-2xl md:text-3xl lg:text-4xl font-bold">
           Popular Items Right Now
         </h2>
-        <p className="text-gray-600 mt-2 max-w-md mx-auto text-sm">
+        <p className="font-nexa text-gray-600 mt-2 max-w-md mx-auto text-sm">
           From intricate Jewelry to exquisite pottery and clothes, explore a
           world of creativity and craftsmanship.
         </p>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[180px] md:auto-rows-[240px] lg:auto-rows-[320px] gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[180px] md:auto-rows-[240px] lg:auto-rows-[320px] gap-4 font-nexa">
         {products.map((item) => (
           <div
             key={item.id}
@@ -41,7 +41,7 @@ const products = [
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
             <div className="relative z-10 text-white rounded-lg p-2 text-sm">
-              <h3 className="font-semibold text-[22px]">{item.title}</h3>
+              <h3 className="font-semibold text-[14px] md:text-[22px]">{item.title}</h3>
               <p className="text-xl">{item.price}</p>
             </div>
             <button className="absolute top-2 right-2 rounded-full shadow hover:scale-110 transition">

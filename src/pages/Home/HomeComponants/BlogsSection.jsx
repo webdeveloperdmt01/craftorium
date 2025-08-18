@@ -33,7 +33,7 @@ const BlogSection = () => {
 
   return (
     <section className="px-4 md:px-8 lg:px-16 xl:px-24 py-12 bg-[fffafa]">
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-[var(--text-hover-clr)] mb-8">
+      <h2 className="font-cormorant text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--text-hover-clr)] mb-8">
         Our Blogs
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -45,23 +45,23 @@ const BlogSection = () => {
             <img
               src={blog.img}
               alt={blog.title}
-              className="w-full h-68 object-cover"
+              className="font-cormorant w-full h-68 object-cover"
             />
             <div className="px-4 pt-3 space-y-2">
-              <p className="text-xs font-bold uppercase text-gray-500 tracking-wide mb-2">
+              <p className="font-cormorant text-xs font-bold uppercase text-gray-500 tracking-wide mb-2">
                 {blog.category}
               </p>
-              <h3 className="text-xl font-semibold text-[var(--text-hover-clr)] mb-1">
+              <h3 className="font-cormorant text-xl font-semibold text-[var(--text-hover-clr)] mb-1">
                 {blog.title}
               </h3>
-              <p className="text-sm text-gray-600">
+              <p className="font-nexa text-sm text-gray-600">
                 {blog.description}
               </p>
             </div>
           </div>
         ))}
       </div>
-      <div className="mt-6 flex justify-end">
+      <div className="font-nexa mt-6 flex justify-end">
         <a href="#" className="text-[var(--text-hover-clr)] text-sm font-medium">View All</a>
       </div>
     </section>

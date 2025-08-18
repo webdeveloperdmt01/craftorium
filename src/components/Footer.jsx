@@ -9,7 +9,7 @@ export default function Footer() {
   const [currency, setCurrency] = useState("₹ (INR)");
 
   return (
-    <footer className="bg-[var(--section-bg-clr)] text-[var(--text-hover-clr)] border-t">
+    <footer className="bg-[var(--section-bg-clr)] text-[var(--text-hover-clr)] border-t font-nexa">
       <div className="px-4 md:px-8 lg:px-16 xl:px-24 py-4 flex flex-col md:flex-row gap-8 md:gap-12">
         <div className="w-64 md:w-72 lg:w-98 flex-shrink-0">
           <div className="flex items-center">

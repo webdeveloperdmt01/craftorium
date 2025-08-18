@@ -25,7 +25,7 @@ export default function Header() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
   return (
-    <header className="bg-[#fef6eb] relative">
+    <header className="bg-[#fef6eb] relative font-nexa">
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between px-4 md:px-8 lg:px-8 xl:px-24 py-1">
         <div className="flex items-center justify-between w-full lg:w-auto">
           <img src={logo} alt="Logo" className="h-20 w-auto" />
@@ -39,7 +39,7 @@ export default function Header() {
         <nav
           className={`${
             isOpen ? "flex" : "hidden"
-          } flex-col lg:flex lg:flex-row lg:space-x-6 xl:space-x-12 text-md lg:text-lg xl:text-xl font-semibold text-[var(--text-clr)] mt-4 lg:mt-0 space-y-2`}
+          } flex-col lg:flex lg:flex-row lg:space-x-6 xl:space-x-10 text-md lg:text-lg xl:text-xl font-semibold text-[var(--text-clr)] mt-4 lg:mt-0 space-y-2 md:space-y-0`}
         >
           <a href="/" className="hover:text-[var(--text-hover-clr)]">
             Home
@@ -54,7 +54,7 @@ export default function Header() {
             {isShopOpen && (
               <div
                 ref={subShopRef}
-                className="lg:absolute top-full mt-2 bg-white border rounded-lg shadow-lg w-48 p-2 z-50"
+                className="lg:absolute top-full mt-2 bg-[#fef6eb] border rounded-lg shadow-lg w-48 p-2 z-50"
               >
                 <button
                   onClick={() => setIsSubShopOpen(!isSubShopOpen)}
@@ -116,7 +116,7 @@ export default function Header() {
         <div
           className={`${
             isOpen ? "flex mt-4" : "hidden"
-          } lg:flex items-center space-x-4 mb-4`}
+          } lg:flex items-center space-x-4 mb-4 md:mb-0`}
         >
           <div className="flex items-center border-2 border-[var(--text-hover-clr)] rounded-full px-5 py-1 w-full lg:w-auto">
             <input

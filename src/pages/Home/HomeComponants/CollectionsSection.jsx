@@ -14,10 +14,10 @@ export default function Collections() {
   return (
     <section className="bg-[#FFF] py-12 md:py-16">
       <div className="px-4 md:px-8 lg:px-16 xl:px-24 text-center">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-[var(--text-hover-clr)] mb-1 md:mb-4">
+        <h2 className="font-cormorant text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--text-hover-clr)] mb-1 md:mb-4">
           Browse Collections
         </h2>
-        <p className="text-gray-700 max-w-xl mx-auto mb-6 md:mb-12">
+        <p className="font-nexa text-gray-700 max-w-xl mx-auto mb-6 md:mb-12">
           From intricate Jewelry to exquisite pottery and cloths, explore a world of creativity and craftsmanship.
         </p>
 
@@ -32,8 +32,8 @@ export default function Collections() {
                 alt={item.title}
                 className="w-full h-54 object-cover"
               />
-              <div className="pt-6 pb-4 text-center">
-                <h3 className="font-medium text-2xl text-[var(--text-hover-clr)]">{item.title}</h3>
+              <div className="font-cormorant pt-6 pb-4 text-center">
+                <h3 className="font-nexa font-medium text-2xl text-[var(--text-hover-clr)]">{item.title}</h3>
               </div>
             </div>
           ))}
