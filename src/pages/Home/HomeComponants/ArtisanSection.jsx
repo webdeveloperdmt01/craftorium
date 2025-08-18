@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
-import CtAvtar from "@/assets/images/ct-avatar.webp";
+import CtAvtar from "@/assets/images/ct-avatar.png";
 import SilkDupatta from "@/assets/images/SilkDupatta.webp";
 import { FaArrowLeft } from "react-icons/fa";
 

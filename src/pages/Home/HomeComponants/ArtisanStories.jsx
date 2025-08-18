@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import CtAvtar from "@/assets/images/ct-avatar.webp";
+import CtAvtar from "@/assets/images/ct-avatar.png";
 
 const artisans = [
   {

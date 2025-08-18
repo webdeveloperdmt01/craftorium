@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Menu, X, Search, ShoppingCart, User, } from "lucide-react";
+import { Menu, X, Search, ShoppingCart, User } from "lucide-react";
 import { FaChevronDown } from "react-icons/fa";
 import logo from "@/assets/images/ct-logo.png";
 
@@ -8,15 +8,9 @@ export default function Header() {
   const [isShopOpen, setIsShopOpen] = useState(false);
   const [isSubShopOpen, setIsSubShopOpen] = useState(false);
   const shopRef = useRef(null);
-  const subShopRef = useRef(null);
   useEffect(() => {
     function handleClickOutside(e) {
-      if (
-        shopRef.current &&
-        !shopRef.current.contains(e.target) &&
-        subShopRef.current &&
-        !subShopRef.current.contains(e.target)
-      ) {
+      if (shopRef.current && !shopRef.current.contains(e.target)) {
         setIsShopOpen(false);
         setIsSubShopOpen(false);
       }
@@ -24,6 +18,7 @@ export default function Header() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
   return (
     <header className="bg-[#fef6eb] relative font-nexa">
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between px-4 md:px-8 lg:px-8 xl:px-24 py-1">
@@ -44,47 +39,67 @@ export default function Header() {
           <a href="/" className="hover:text-[var(--text-hover-clr)]">
             Home
           </a>
-          <div ref={shopRef} className="relative group">
+          <div
+            ref={shopRef}
+            className="relative group"
+            onMouseEnter={() => window.innerWidth >= 1024 && setIsShopOpen(true)}
+            onMouseLeave={() =>
+              window.innerWidth >= 1024 && (setIsShopOpen(false), setIsSubShopOpen(false))
+            }
+          >
             <button
-              onClick={() => setIsShopOpen(!isShopOpen)}
+              onClick={() =>
+                window.innerWidth < 1024 && setIsShopOpen(!isShopOpen)
+              }
               className="flex items-center hover:text-[var(--text-hover-clr)]"
             >
               Shop <FaChevronDown size={16} className="ml-1" />
             </button>
             {isShopOpen && (
-              <div
-                ref={subShopRef}
-                className="lg:absolute top-full mt-2 bg-[#fef6eb] border rounded-lg shadow-lg w-48 p-2 z-50"
-              >
-                <button
-                  onClick={() => setIsSubShopOpen(!isSubShopOpen)}
-                  className="flex justify-between items-center w-full px-2 py-1 hover:bg-gray-100 rounded"
+              <div className="absolute left-0 top-full mt-0 lg:w-52 bg-[#fef6eb] border rounded-lg shadow-lg z-50 text-[16px]">
+                <div
+                  className="relative group"
+                  onMouseEnter={() =>
+                    window.innerWidth >= 1024 && setIsSubShopOpen(true)
+                  }
+                  onMouseLeave={() =>
+                    window.innerWidth >= 1024 && setIsSubShopOpen(false)
+                  }
                 >
-                  Clothing
-                  <FaChevronDown size={14} />
-                </button>
-                {isSubShopOpen && (
-                  <div className="ml-4 mt-1 space-y-1">
-                    <a
-                      href="/"
-                      className="block px-2 py-1 text-sm hover:bg-gray-100 rounded"
-                    >
-                      Men
-                    </a>
-                    <a
-                      href="/"
-                      className="block px-2 py-1 text-sm hover:bg-gray-100 rounded"
-                    >
-                      Women
-                    </a>
-                    <a
-                      href="/"
-                      className="block px-2 py-1 text-sm hover:bg-gray-100 rounded"
-                    >
-                      Kids
-                    </a>
-                  </div>
-                )}
+                  <button
+                    onClick={() =>
+                      window.innerWidth < 1024 &&
+                      setIsSubShopOpen(!isSubShopOpen)
+                    }
+                    className="flex justify-between items-center w-full px-2 py-1 hover:bg-gray-100 rounded"
+                  >
+                    Clothing <FaChevronDown size={14} />
+                  </button>
+
+                  {isSubShopOpen && (
+                    <div className="absolute left-16 top-8 ml-0 mt-0 w-40 bg-[#fef6eb] border rounded-lg shadow-lg">
+                      <a
+                        href="/"
+                        className="block px-2 py-1 text-sm hover:bg-gray-100 rounded"
+                      >
+                        Men
+                      </a>
+                      <a
+                        href="/"
+                        className="block px-2 py-1 text-sm hover:bg-gray-100 rounded"
+                      >
+                        Women
+                      </a>
+                      <a
+                        href="/"
+                        className="block px-2 py-1 text-sm hover:bg-gray-100 rounded"
+                      >
+                        Kids
+                      </a>
+                    </div>
+                  )}
+                </div>
+
                 <a
                   href="/"
                   className="block px-2 py-1 hover:bg-gray-100 rounded"
@@ -100,6 +115,7 @@ export default function Header() {
               </div>
             )}
           </div>
+
           <a href="/blogs" className="hover:text-[var(--text-hover-clr)]">
             Blog
           </a>
