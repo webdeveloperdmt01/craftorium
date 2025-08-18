@@ -1,5 +1,5 @@
 import React from "react";
-import StrartExp from "@/assets/images/StartExploring.webp";
+import StrartExp from "@/assets/images/ct-exploring.webp";
 
 const StartExploring = () => {
   return (

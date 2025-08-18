@@ -7,16 +7,18 @@ import PopularItems from "./HomeComponants/PopularItems";
 import ArtisanalElegance from "./HomeComponants/ArtisanalElegance";
 import BlogsSection from "./HomeComponants/BlogsSection";
 import StartExploring from "./HomeComponants/StartExploring";
+import ArtisanStories from "./HomeComponants/ArtisanStories";
 
 export default function Home() {
   return (
-    <div className="font-sans">
+    <div className="">
       <Header />
       <HeroSection />
       <CollectionsSection />
       <PopularItems />
       <ArtisanalElegance />
       <BlogsSection />
+      <ArtisanStories/>
       <StartExploring/>
       <Footer />
     </div>

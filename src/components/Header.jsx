@@ -100,16 +100,16 @@ export default function Header() {
               </div>
             )}
           </div>
-          <a href="/" className="hover:text-[var(--text-hover-clr)]">
+          <a href="/blogs" className="hover:text-[var(--text-hover-clr)]">
             Blog
           </a>
           <a href="/" className="hover:text-[var(--text-hover-clr)]">
             About
           </a>
-          <a href="/" className="hover:text-[var(--text-hover-clr)]">
+          <a href="/artisans" className="hover:text-[var(--text-hover-clr)]">
             Artisans
           </a>
-          <a href="/" className="hover:text-[var(--text-hover-clr)]">
+          <a href="/contact" className="hover:text-[var(--text-hover-clr)]">
             Contact
           </a>
         </nav>

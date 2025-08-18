@@ -4,7 +4,6 @@ import logo from "@/assets/images/ct-logo.png";
 import { useState } from "react";
 
 export default function Footer() {
-  const [country, setCountry] = useState("India");
   const [language, setLanguage] = useState("English (UK)");
   const [currency, setCurrency] = useState("₹ (INR)");
 
@@ -68,16 +67,6 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between px-4 md:px-8 lg:px-16 xl:px-24 py-3">
           <div className="flex items-center space-x-3">
             <FaGlobe className="w-5 h-5" />
-            <select 
-              value={country} 
-              onChange={(e) => setCountry(e.target.value)}
-              className="bg-transparent border border-[#fef6eb] rounded px-2 py-1 text-xs"
-            >
-               <option className="text-black">India</option>
-               <option className="text-black">USA</option>
-               <option className="text-black">UK</option>
-               <option className="text-black">Canada</option>
-            </select>
 
             <select 
               value={language} 
