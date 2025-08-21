@@ -12,12 +12,17 @@ export default function HeroSection() {
           Connecting Craftsmanship with the World
         </h1>
         <p className="font-nexa text-md md:text-lg text-white max-w-2xl mx-auto mb-5 md:mb-12">
-        Discover handmade treasures and the stories behind them.
+          Discover handmade treasures and the stories behind them.
         </p>
         <div className="pt-6">
-        <button className="font-nexa bg-[var(--text-hover-clr)] text-white px-6 md:px-8 py-1.5 md:py-2 rounded-[40px] md:rounded-[60px] text-md md:text-xl font-bold hover:bg-[var(--text-hover-clr)] transition">
-          SHOP NOW
-        </button>
+          <button
+            className="font-nexa bg-[var(--text-hover-clr)] text-white px-6 md:px-8 py-1.5 md:py-2 
+             rounded-[40px] md:rounded-[60px] text-md md:text-xl font-bold 
+             transition-transform duration-300 ease-out
+             hover:-translate-y-1 hover:scale-105 hover:shadow-lg"
+          >
+            SHOP NOW
+          </button>
         </div>
       </div>
     </section>

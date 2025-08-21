@@ -14,13 +14,20 @@ const StartExploring = () => {
         <h1 className="font-cormorant font-bold text-3xl md:text-4xl lg:text-5xl mb-4">
           Experience Crafted Elegance
         </h1>
-        <p className="font-nexa text-sm md:text-lg mb-6 text-gray-200">
+        <p className="font-nexa text-sm md:text-lg mb-10 text-gray-200">
           Sample the sampling in the sample for samples as handcraft items.
           Sample the sampling.
         </p>
-        <button className= "font-nexa bg-white text-[var(--text-hover-clr)] px-6 md:px-8 py-2 md:py-3 rounded-[60px] text-xl font-semibold transition">
-          Start Exploring
-        </button>
+      <button
+  className="font-nexa bg-white text-[var(--text-hover-clr)] px-6 md:px-8 py-2 md:py-3 
+             rounded-[60px] text-xl font-semibold shadow-sm
+             transform-gpu will-change-transform
+             transition-transform duration-300 ease-out
+             hover:-translate-y-1 hover:scale-105 hover:shadow-lg"
+>
+  Start Exploring
+</button>
+
       </div>
     </section>
   );

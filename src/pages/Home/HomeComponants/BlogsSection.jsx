@@ -34,40 +34,53 @@ export default function BlogAndCTA() {
 
   return (
     <>
-      <section className="px-4 md:px-8 lg:px-16 xl:px-24 py-12 bg-[fffafa]">
-        <h2 className="font-cormorant text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--text-hover-clr)] mb-8">
-          Our Blogs
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogs.map((blog) => (
-            <div
-              key={blog.id}
-              className="bg-white rounded-2xl border border-gray-300 transition overflow-hidden h-104"
-            >
-              <img
-                src={blog.img}
-                alt={blog.title}
-                className="font-cormorant w-full h-68 object-cover"
-              />
-              <div className="px-4 pt-3 space-y-2">
-                <p className="font-cormorant text-xs font-bold uppercase text-gray-500 tracking-wide mb-2">
-                  {blog.category}
-                </p>
-                <h3 className="font-cormorant text-xl font-semibold text-[var(--text-hover-clr)] mb-1">
-                  {blog.title}
-                </h3>
-                <p className="font-nexa text-sm text-gray-600">{blog.description}</p>
-              </div>
-            </div>
-          ))}
+      <section className="px-4 md:px-8 lg:px-16 xl:px-24 py-10 bg-[fffafa]">
+  <h2 className="font-cormorant text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--text-hover-clr)] mb-8">
+    Our Blogs
+  </h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {blogs.map((blog) => (
+      <div
+        key={blog.id}
+        className="bg-white rounded-2xl border border-gray-300 overflow-hidden cursor-pointer group transition h-104"
+      >
+        <div className="overflow-hidden">
+          <img
+            src={blog.img}
+            alt={blog.title}
+            className="w-full h-68 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+          />
         </div>
-        <div className="font-nexa mt-6 flex justify-end">
-          <a href="#" className="text-[var(--text-hover-clr)] text-sm font-medium">
-            View All
-          </a>
+        <div className="px-4 pt-3 space-y-2">
+          <p className="font-cormorant text-xs font-bold uppercase text-gray-500 tracking-wide mb-2">
+            {blog.category}
+          </p>
+          <h3
+            className="font-cormorant text-xl font-semibold text-[var(--text-hover-clr)] mb-1 
+                       transition-all duration-300 ease-in-out 
+                       group-hover:text-black group-hover:-translate-y-1"
+          >
+            {blog.title}
+          </h3>
+          <p className="font-nexa text-sm text-gray-600">{blog.description}</p>
         </div>
-      </section>
-         <section className="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 py-8 rounded-3xl mx-4 md:mx-8 lg:mx-16 xl:mx-24 my-6 md:my-12 lg:my-16">
+      </div>
+    ))}
+  </div>
+
+  <div className="font-nexa mt-6 flex justify-end">
+    <a
+      href="#"
+      className="text-[var(--text-hover-clr)] text-sm font-medium relative inline-block
+                 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-[var(--text-hover-clr)] 
+                 after:transition-all after:duration-300 hover:after:w-full"
+    >
+      View All
+    </a>
+  </div>
+    </section>
+
+         <section className="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 py-8 rounded-3xl mx-4 md:mx-8 lg:mx-16 xl:mx-24 my-2 md:my-10 lg:my-12">
         <div className="grid md:grid-cols-2 gap-2 items-center place-items-center p-2">
          <img
         src={Artisanbg}
@@ -81,9 +94,16 @@ export default function BlogAndCTA() {
             <p className="text-[var(--text-clr)] text-base md:text-lg max-w-xl font-nexa">
               Every product you explore and buy helps an artisan continue their craft and sustain their community.
             </p>
-             <button className="font-nexa bg-[var(--text-hover-clr)] text-white mt-8 md:mt-12 px-6 md:px-8 py-1.5 md:py-3 rounded-[60px] font-semibold shadow hover:bg-[var(--text-hover-clr)] transition">
-                Explore Our Collection
-              </button>
+            <button
+  className="font-nexa bg-[var(--text-hover-clr)] text-white mt-8 md:mt-12 
+             px-6 md:px-8 py-1.5 md:py-3 rounded-[60px] font-semibold shadow 
+             transform-gpu will-change-transform
+             transition-transform duration-300 ease-out 
+             hover:-translate-y-1 hover:scale-105 hover:shadow-xl"
+>
+  Explore Our Collection
+</button>
+
           </div>
         </div>
       </section>

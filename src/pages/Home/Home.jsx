@@ -12,7 +12,6 @@ import ArtisanSection from "./HomeComponants/ArtisanSection";
 export default function Home() {
   return (
     <div className="">
-      <Header />
       <HeroSection />
       <CollectionsSection />
       <PopularItems />
@@ -20,7 +19,6 @@ export default function Home() {
       <BlogsSection />
       <ArtisanSection/>
       <StartExploring/>
-      <Footer />
     </div>
   );
 }

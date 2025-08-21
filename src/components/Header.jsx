@@ -77,7 +77,7 @@ export default function Header() {
                   </button>
 
                   {isSubShopOpen && (
-                    <div className="absolute left-16 top-8 ml-0 mt-0 w-40 bg-[#fef6eb] border rounded-lg shadow-lg">
+                    <div className="absolute left-46 top-6 ml-0 mt-0 w-40 bg-[#fef6eb] border rounded-lg shadow-lg">
                       <a
                         href="/"
                         className="block px-2 py-1 text-sm hover:bg-gray-100 rounded"

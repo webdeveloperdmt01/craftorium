@@ -94,7 +94,7 @@ export default function ArtisanSection() {
                 onClick={() => navigate(`/artisan/${artisan.id}`)}
                 className="cursor-pointer relative group flex-shrink-0 w-[250px] snap-center"
               >
-                <div className="overflow-hidden relative">
+                <div className="overflow-hidden relative rounded-xl">
                   <img
                     src={artisan.image}
                     alt={artisan.name}

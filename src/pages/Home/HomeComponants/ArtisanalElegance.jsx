@@ -16,9 +16,16 @@ const ArtisanalElegance = () => {
           Jewelry to exquisite pottery and cloths, explore a world of creativity and
           craftsmanship.
         </p>
-        <button className="font-nexa bg-[var(--text-hover-clr)] text-white mt-8 md:mt-12 px-6 md:px-8 py-1.5 md:py-2 rounded-[60px] font-semibold shadow hover:bg-[var(--text-hover-clr)] transition">
-          SHOP NOW
-        </button>
+        <button
+  className="font-nexa bg-[var(--text-hover-clr)] text-white mt-8 md:mt-12 
+             px-6 md:px-8 py-1.5 md:py-2 rounded-[60px] font-semibold shadow 
+             transform-gpu will-change-transform
+             transition-transform duration-300 ease-out
+             hover:-translate-y-1 hover:scale-105 hover:shadow-xl"
+>
+  SHOP NOW
+</button>
+
       </div>
       <div className="relative mt-10 md:mt-0 md:w-1/2 flex justify-end">
         <div className="rounded-2xl overflow-hidden border-10 border-[#fef5ef] w-[340px] md:w-[350px] lg:w-[450px]">
