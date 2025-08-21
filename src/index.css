@@ -12,3 +12,6 @@
 .font-nexa {
   font-family: "Montserrat", sans-serif;
 }
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

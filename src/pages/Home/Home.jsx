@@ -7,7 +7,7 @@ import PopularItems from "./HomeComponants/PopularItems";
 import ArtisanalElegance from "./HomeComponants/ArtisanalElegance";
 import BlogsSection from "./HomeComponants/BlogsSection";
 import StartExploring from "./HomeComponants/StartExploring";
-import ArtisanStories from "./HomeComponants/ArtisanStories";
+import ArtisanSection from "./HomeComponants/ArtisanSection";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
       <PopularItems />
       <ArtisanalElegance />
       <BlogsSection />
-      <ArtisanStories/>
+      <ArtisanSection/>
       <StartExploring/>
       <Footer />
     </div>

@@ -3,6 +3,7 @@ import beigeTextile from "@/assets/images/artisans.webp";
 
 const ArtisanalElegance = () => {
   return (
+    <>
     <section className="bg-[#ffe6cd] py-8 px-4 md:px-8 lg:px-16 xl:px-24 flex flex-col md:flex-row items-center justify-between">
       <div className="md:w-1/2 space-y-5">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--text-hover-clr)] font-cormorant">
@@ -31,7 +32,10 @@ const ArtisanalElegance = () => {
           Beige Textile
         </div>
       </div>
+      
     </section>
+
+      </>
   );
 };
 

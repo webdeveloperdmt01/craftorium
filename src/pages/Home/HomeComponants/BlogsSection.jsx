@@ -2,6 +2,7 @@ import React from "react";
 import blog1 from "@/assets/images/Jewellery.webp";
 import blog2 from "@/assets/images/Pottery.webp";
 import blog3 from "@/assets/images/Textiles.webp";
+import Artisanbg from "@/assets/images/big-at5.png";
 
 export default function BlogAndCTA() {
   const blogs = [
@@ -66,18 +67,25 @@ export default function BlogAndCTA() {
           </a>
         </div>
       </section>
-
-      <section className="bg-gray-200 py-8 px-6 text-center rounded-2xl mx-6 md:mx-16 my-4 md:my-12 lg:my-16">
-        <h2 className="text-2xl md:text-4xl font-bold text-[var(--text-hover-clr)] mb-6">
-          Your purchase supports a livelihood
-        </h2>
-        <p className="text-[var(--text-clr)] text-sm md:text-lg mb-8 max-w-xl mx-auto">
-          Every product you explore and buy helps an artisan continue their craft
-          and sustain their community.
-        </p>
-        <button className="bg-white text-[#8E81FA] font-semibold px-6 py-2 rounded-full hover:scale-105 transition-transform duration-300">
-          Explore Our Collection
-        </button>
+         <section className="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 py-8 rounded-3xl mx-4 md:mx-8 lg:mx-16 xl:mx-24 my-6 md:my-12 lg:my-16">
+        <div className="grid md:grid-cols-2 gap-2 items-center place-items-center p-2">
+         <img
+        src={Artisanbg}
+        alt="Artisan"
+        className="rounded-2xl w-[450px] object-contain border-10 border-[#fef5ef]"
+      />
+          <div className="text-center md:text-left">
+            <h2 className="font-cormorant text-3xl md:text-3xl lg:text-4xl font-bold text-[var(--text-hover-clr)] mb-4">
+              Your Purchase Supports a Livelihood
+            </h2>
+            <p className="text-[var(--text-clr)] text-base md:text-lg max-w-xl font-nexa">
+              Every product you explore and buy helps an artisan continue their craft and sustain their community.
+            </p>
+             <button className="font-nexa bg-[var(--text-hover-clr)] text-white mt-8 md:mt-12 px-6 md:px-8 py-1.5 md:py-3 rounded-[60px] font-semibold shadow hover:bg-[var(--text-hover-clr)] transition">
+                Explore Our Collection
+              </button>
+          </div>
+        </div>
       </section>
     </>
   );

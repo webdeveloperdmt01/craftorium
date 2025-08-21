@@ -1,80 +1,125 @@
-import { useParams, useNavigate } from "react-router-dom";
-import CtAvtar from "@/assets/images/ct-avatar.png";
-import SilkDupatta from "@/assets/images/SilkDupatta.webp";
-import { FaArrowLeft } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { useRef, useState, useEffect } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import AtOne from "@/assets/images/artisans-1.webp";
+import AtTwo from "@/assets/images/artisans-2.webp";
+import AtThree from "@/assets/images/artisans-3.webp";
 
-const artisanData = {
-  1: {
-    name: "Aarav Sharma",
-    bio: "Aarav has been practicing block printing for 20+ years. His journey began with his father...",
-    photos: [CtAvtar, SilkDupatta, SilkDupatta],
-    products: ["Handmade Scarf", "Printed Tablecloth", "Decorative Cushion"],
-  },
-  2: {
-    name: "Meera Patel",
-    bio: "Meera is a skilled embroiderer from Kutch, known for her intricate designs...",
-    photos: [CtAvtar, SilkDupatta, SilkDupatta],
-    products: ["Embroidered Bag", "Traditional Shawl", "Wall Hanging"],
-  },
-  3: {
-    name: "Ravi Kumar",
-    bio: "Ravi comes from a family of weavers in Varanasi, keeping the silk weaving tradition alive...",
-    photos: [CtAvtar, SilkDupatta, SilkDupatta],
-    products: ["Banarasi Saree", "Silk Dupatta", "Table Runner"],
-  },
-};
+const artisans = [
+  { id: 1, name: "Ananya Verma", craft: "Hand Block Printing", image: AtOne },
+  { id: 2, name: "Aarav Sharma", craft: "Hand Block Printing", image: AtTwo },
+  { id: 3, name: "Kavya Iyer", craft: "Silk Weaving", image: AtThree },
+  { id: 4, name: "Riya Das", craft: "Terracotta Pottery", image: AtOne },
+  { id: 5, name: "Aditya Menon", craft: "Wood Carving", image: AtTwo },
+  { id: 6, name: "Meera Rao", craft: "Handloom Weaving", image: AtThree },
+   {id: 8, name: "Kavya Iyer", craft: "Silk Weaving", image: AtThree },
+  { id: 9, name: "Riya Das", craft: "Terracotta Pottery", image: AtOne },
+  { id: 10, name: "Aditya Menon", craft: "Wood Carving", image: AtTwo },
+  { id: 11, name: "Meera Rao", craft: "Handloom Weaving", image: AtThree },
+];
 
 export default function ArtisanSection() {
-  const { id } = useParams();
   const navigate = useNavigate();
-  const artisan = artisanData[parseInt(id)];
+  const containerRef = useRef(null);
+  const [centerIndex, setCenterIndex] = useState(0);
 
-  if (!artisan) return <p className="p-10 text-center text-red-500">Artisan not found</p>;
+  useEffect(() => {
+    const container = containerRef.current;
+
+    const handleScroll = () => {
+      const containerCenter = container.scrollLeft + container.offsetWidth / 2;
+      let closestIndex = 0;
+      let minDistance = Infinity;
+
+      [...container.children].forEach((child, index) => {
+        const childCenter =
+          child.offsetLeft + child.offsetWidth / 2 - container.scrollLeft;
+        const distance = Math.abs(container.offsetWidth / 2 - childCenter);
+
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestIndex = index;
+        }
+      });
+
+      setCenterIndex(closestIndex);
+    };
+
+    container.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => container.removeEventListener("scroll", handleScroll);
+  }, []);
+  const scroll = (direction) => {
+    if (containerRef.current) {
+      const cardWidth = 250;
+      const gap = 28;
+      const scrollStep = cardWidth + gap;
+
+      containerRef.current.scrollBy({
+        left: direction === "left" ? -scrollStep : scrollStep,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
-    <section className="max-w-6xl mx-auto px-6 py-16">
-  <button
-  onClick={() => navigate(-1)}
-  className="font-cormorant mb-8 flex items-center gap-2 text-[var(--text-clr)] hover:text-[var(--text-hover-clr)] font-medium transition"
->
-  <FaArrowLeft className="text-2xl" /> Back to Artisans
-</button>
-      <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
-        <img
-          src={artisan.photos[0]}
-          alt={artisan.name}
-          className="w-48 h-48 border-2 border-r-amber-300 rounded-full object-contain shadow-lg"
-        />
-        <div>
-          <h1 className="font-nexa text-4xl md:text-5xl font-bold mb-4 text-[var(--text-clr)]">{artisan.name}</h1>
-          <p className=" font-nexa text-gray-600 text-lg">{artisan.bio}</p>
+    <section
+      className="pt-8 md:pt-12 lg:pt-16 pb-8 md:pb-12 lg:pb-20 bg-[#ffe6cd]"
+      id="artisans"
+    >
+      <div className="px-4 md:px-8 lg:px-16 xl:px-24 text-center">
+        <h2 className="font-cormorant text-2xl md:text-4xl lg:text-5xl font-bold text-[var(--text-hover-clr)] mb-4">
+          Meet the Hands Behind the Art
+        </h2>
+        <p className="font-nexa text-gray-600 text-sm md:text-md max-w-2xl mx-auto mb-6 md:mb-12">
+          Discover the incredible journeys of our artisans — their struggles,
+          achievements, and timeless crafts that make every product unique.
+        </p>
+
+        <div className="relative">
+          <button
+            onClick={() => scroll("left")}
+            className="absolute left-1 md:left-2 top-1/2 -translate-y-1/2 bg-[#ffe6cd] text-black p-3 rounded-full shadow-md hover:bg-[#ffe6cd] z-10"
+          >
+            <FaChevronLeft size={20} />
+          </button>
+          <div
+            ref={containerRef}
+            className="flex overflow-x-auto space-x-6 scrollbar-hide snap-x snap-mandatory"
+          >
+            {artisans.map((artisan, index) => (
+              <div
+                key={artisan.id + index}
+                onClick={() => navigate(`/artisan/${artisan.id}`)}
+                className="cursor-pointer relative group flex-shrink-0 w-[250px] snap-center"
+              >
+                <div className="overflow-hidden relative">
+                  <img
+                    src={artisan.image}
+                    alt={artisan.name}
+                    className="w-full h-[300px] object-fill transform group-hover:scale-105 transition duration-500"
+                  />
+                  {index !== centerIndex && (
+                    <div className="absolute inset-0 bg-black/60 transition z-9"></div>
+                  )}
+                  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-[85%] bg-[#ffe6cd] rounded-[10px] px-4 py-2 text-center shadow-md">
+                    <h3 className="font-nexa text-lg md:text-xl font-semibold text-[var(--text-hover-clr)]">
+                      {artisan.name}
+                    </h3>
+                    <p className="text-sm text-gray-500">{artisan.craft}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <button
+            onClick={() => scroll("right")}
+            className="absolute right-1 md:right-2 top-1/2 -translate-y-1/2 bg-[#ffe6cd] text-black p-3 rounded-full shadow-md hover:bg-[#ffe6cd] z-10"
+          >
+            <FaChevronRight size={20} />
+          </button>
         </div>
-      </div>
-      <h2 className="font-cormorant text-2xl font-semibold mb-6 text-gray-800">Gallery</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
-        {artisan.photos.map((photo, i) => (
-          <div
-            key={i}
-            className="overflow-hidden rounded-xl shadow-md transform transition hover:scale-105"
-          >
-            <img
-              src={photo}
-              alt={`${artisan.name} work ${i + 1}`}
-              className="w-full object-contain"
-            />
-          </div>
-        ))}
-      </div>
-      <h2 className="font-cormorant text-2xl font-semibold mb-6 text-[var(--text-hover-clr)]">Products by {artisan.name}</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {artisan.products.map((product, i) => (
-          <div
-            key={i}
-            className="bg-white border rounded-xl shadow-sm p-4 flex items-center justify-center hover:shadow-lg hover:scale-105 transition-transform duration-300"
-          >
-            <p className="font-nexa font-medium text-gray-700 text-center">{product}</p>
-          </div>
-        ))}
       </div>
     </section>
   );
