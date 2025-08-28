@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Menu, X, Search, ShoppingCart, User } from "lucide-react";
 import { FaChevronDown } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import logo from "@/assets/images/ct-logo.png";
 
 export default function Header() {
@@ -8,6 +9,7 @@ export default function Header() {
   const [isShopOpen, setIsShopOpen] = useState(false);
   const [isSubShopOpen, setIsSubShopOpen] = useState(false);
   const shopRef = useRef(null);
+
   useEffect(() => {
     function handleClickOutside(e) {
       if (shopRef.current && !shopRef.current.contains(e.target)) {
@@ -31,14 +33,16 @@ export default function Header() {
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
+
         <nav
           className={`${
             isOpen ? "flex" : "hidden"
           } flex-col lg:flex lg:flex-row lg:space-x-6 xl:space-x-10 text-md lg:text-lg xl:text-xl font-semibold text-[var(--text-clr)] mt-4 lg:mt-0 space-y-2 md:space-y-0`}
         >
-          <a href="/" className="hover:text-[var(--text-hover-clr)]">
+          <Link to="/" className="hover:text-[var(--text-hover-clr)]">
             Home
-          </a>
+          </Link>
+
           <div
             ref={shopRef}
             className="relative group"
@@ -78,57 +82,58 @@ export default function Header() {
 
                   {isSubShopOpen && (
                     <div className="absolute left-46 top-6 ml-0 mt-0 w-40 bg-[#fef6eb] border rounded-lg shadow-lg">
-                      <a
-                        href="/"
+                      <Link
+                        to="/shop/men"
                         className="block px-2 py-1 text-sm hover:bg-gray-100 rounded"
                       >
                         Men
-                      </a>
-                      <a
-                        href="/"
+                      </Link>
+                      <Link
+                        to="/shop/women"
                         className="block px-2 py-1 text-sm hover:bg-gray-100 rounded"
                       >
                         Women
-                      </a>
-                      <a
-                        href="/"
+                      </Link>
+                      <Link
+                        to="/shop/kids"
                         className="block px-2 py-1 text-sm hover:bg-gray-100 rounded"
                       >
                         Kids
-                      </a>
+                      </Link>
                     </div>
                   )}
                 </div>
 
-                <a
-                  href="/"
+                <Link
+                  to="/shop/accessories"
                   className="block px-2 py-1 hover:bg-gray-100 rounded"
                 >
                   Accessories
-                </a>
-                <a
-                  href="/"
+                </Link>
+                <Link
+                  to="/shop/home-decor"
                   className="block px-2 py-1 hover:bg-gray-100 rounded"
                 >
                   Home Decor
-                </a>
+                </Link>
               </div>
             )}
           </div>
 
-          <a href="/blogs" className="hover:text-[var(--text-hover-clr)]">
+          <Link to="/blogs" className="hover:text-[var(--text-hover-clr)]">
             Blog
-          </a>
-          <a href="/" className="hover:text-[var(--text-hover-clr)]">
+          </Link>
+          <Link to="/about-us" className="hover:text-[var(--text-hover-clr)]">
             About
-          </a>
-          <a href="/artisans" className="hover:text-[var(--text-hover-clr)]">
+          </Link>
+          <Link to="/artisans" className="hover:text-[var(--text-hover-clr)]">
             Artisans
-          </a>
-          <a href="/contact" className="hover:text-[var(--text-hover-clr)]">
+          </Link>
+          <Link to="/contact-us" className="hover:text-[var(--text-hover-clr)]">
             Contact
-          </a>
+          </Link>
         </nav>
+
         <div
           className={`${
             isOpen ? "flex mt-4" : "hidden"

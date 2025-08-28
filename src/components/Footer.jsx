@@ -64,7 +64,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="bg-[var(--text-hover-clr)] text-white text-sm">
-        <div className="flex flex-col md:flex-row items-center justify-between px-4 md:px-8 lg:px-16 xl:px-24 py-3">
+        <div className="flex flex-col lg:flex-row items-center justify-between px-4 md:px-8 lg:px-16 xl:px-24 py-3">
           <div className="flex items-center space-x-3">
             <FaGlobe className="w-5 h-5" />
 
@@ -90,10 +90,10 @@ export default function Footer() {
                <option className="text-black">€ (EUR)</option>
             </select>
           </div>
-          <p className="text-xs mt-2 md:mt-0 text-center">
+          <p className="text-xs mt-3 md:mt-3 lg:mt-0 text-center">
             DESIGNED BY DIGITAL MARKET TAP
           </p>
-          <div className="flex space-x-4 mt-2 md:mt-0">
+          <div className="flex space-x-4 mt-3 md:mt-2 lg:mt-0">
             <a href="#" className="hover:underline">Terms Of Use</a>
             <a href="#" className="hover:underline">Privacy</a>
             <a href="#" className="hover:underline">Local Shops</a>

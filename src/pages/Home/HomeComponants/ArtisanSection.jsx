@@ -65,7 +65,7 @@ export default function ArtisanSection() {
 
   return (
     <section
-      className="pt-8 md:pt-12 lg:pt-16 pb-8 md:pb-12 lg:pb-20 bg-[#ffe6cd]"
+      className="pt-8 md:pt-12 lg:pt-16 pb-8 md:pb-12 lg:pb-20 bg-[#fef6eb]"
       id="artisans"
     >
       <div className="px-4 md:px-8 lg:px-16 xl:px-24 text-center">

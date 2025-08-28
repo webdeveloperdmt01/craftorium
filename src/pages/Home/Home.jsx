@@ -1,6 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-
 import HeroSection from "./HomeComponants/HeroSection";
 import CollectionsSection from "./HomeComponants/CollectionsSection";
 import PopularItems from "./HomeComponants/PopularItems";

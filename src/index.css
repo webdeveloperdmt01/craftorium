@@ -3,7 +3,7 @@
 :root {
   --text-clr: #615004;
   --text-hover-clr: #184309;
-  --section-bg-clr:#fef6eb
+  --section-bg-clr:#fef6eb;
 }
 .font-cormorant {
   font-family: "Cormorant Garamond", serif;
