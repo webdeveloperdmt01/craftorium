@@ -4,7 +4,7 @@ import heroImage from "@/assets/images/contact-hero.webp";
 export default function AboutHero() {
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat bg-fixed py-28 md:py-44 px-4 md:px-8 lg:px-16 xl:px-24"
+      className="relative bg-cover bg-center bg-no-repeat bg-fixed py-12 md:py-28 lg:py-44 px-4 md:px-8 lg:px-16 xl:px-24"
       style={{
         backgroundImage: `url(${heroImage})`,
         backgroundColor: "var(--section-bg-clr)",
@@ -13,7 +13,7 @@ export default function AboutHero() {
       <div className="absolute inset-0 bg-black/40"></div>
 
       <div className="relative z-10 flex flex-col items-center text-center lg:text-left lg:items-start">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 font-cormorant text-white">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-cormorant text-white">
           About Craftorium
         </h1>
 

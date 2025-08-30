@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="px-4 md:px-8 lg:px-16 xl:px-24 py-4 flex flex-col md:flex-row gap-8 md:gap-12">
         <div className="w-64 md:w-72 lg:w-98 flex-shrink-0">
           <div className="flex items-center">
-            <img src={logo} alt="Logo" className="h-full w-34"/>
+            <a href="/"><img src={logo} alt="Logo" className="h-full w-34"/></a>
           </div>
           <p className="text-sm w-full md:max-w-xs text-gray-700 mb-6 md:mb-12 mt-2 md:mt-0">
             Sample the sampling in the sample for samples as handcraft items,

@@ -25,7 +25,7 @@ export default function Header() {
     <header className="bg-[#fef6eb] relative font-nexa">
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between px-4 md:px-8 lg:px-8 xl:px-24 py-1">
         <div className="flex items-center justify-between w-full lg:w-auto">
-          <img src={logo} alt="Logo" className="h-20 w-auto" />
+         <a href="/"> <img src={logo} alt="Logo" className="h-20 w-auto" /></a>
           <button
             className="lg:hidden text-[var(--text-clr)]"
             onClick={() => setIsOpen(!isOpen)}

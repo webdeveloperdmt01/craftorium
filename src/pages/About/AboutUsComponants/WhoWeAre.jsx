@@ -3,22 +3,22 @@ import whoWeAreImg from "@/assets/images/who-we-are.webp";
 
 export default function WhoWeAre() {
   return (
-    <section className="relative py-24 px-4 md:px-8 lg:px-16 xl:px-24 bg-[var(--section-bg-clr)] overflow-hidden">
-      <div className="flex flex-col lg:flex-row items-center gap-16">
+    <section className="relative py-14 md:py-18 lg:py-24 px-4 md:px-8 lg:px-16 xl:px-24 bg-[var(--section-bg-clr)] overflow-hidden">
+      <div className="flex flex-col lg:flex-row items-center gap-10 md:gap-16">
         <div className="lg:w-1/2 text-center lg:text-left">
-          <div className="inline-block bg-[var(--text-hover-clr)] text-white font-nexa px-5 py-2 rounded-full text-sm mb-5 shadow-lg">
+          <div className="inline-block bg-[var(--text-hover-clr)] text-white font-nexa px-5 py-1.5 md:py-2 rounded-full text-sm mb-5 shadow-lg">
             Who We Are
           </div>
 
-          <h2 className="text-5xl md:text-6xl font-cormorant font-semibold mb-6 text-[var(--text-clr)]">
-            Craftorium — <span className="text-[var(--text-hover-clr)]">The Multivendor Marketplace</span>
+          <h2 className="text-3xl md:text-5xl lg:text-5xl xl:text-6xl font-cormorant font-bold mb-6 text-[var(--text-clr)]">
+            Craftorium — The Multivendor Marketplace
           </h2>
 
-          <p className="text-lg md:text-xl font-nexa text-[var(--text-clr)] leading-relaxed mb-6">
+          <p className="text-md md:text-lg lg:text-lg xl:text-xl font-nexa text-[var(--text-clr)] leading-relaxed mb-2 md:mb-6">
             Craftorium is a <span className="font-bold">unique multivendor platform</span> where creators, makers, and brands come together to showcase their products. From handcrafted items to modern innovations, we empower vendors to grow and provide customers with an extraordinary shopping experience.
           </p>
 
-          <p className="text-lg md:text-xl font-nexa text-[var(--text-clr)] leading-relaxed">
+          <p className="text-md md:text-lg lg:text-lg xl:text-xl font-nexa text-[var(--text-clr)] leading-relaxed">
             Whether you’re a nano, micro, or large-scale seller, Craftorium helps you reach a wider audience, build your brand, and thrive in a trusted, creative marketplace.
           </p>
         </div>

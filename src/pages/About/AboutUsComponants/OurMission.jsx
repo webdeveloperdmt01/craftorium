@@ -43,20 +43,20 @@ export default function MissionAchievements() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 md:px-12 lg:px-20 bg-[var(--section-bg-clr)]">
-      <div className="max-w-7xl mx-auto text-center mb-16">
-        <h2 className="inline-block bg-[var(--text-hover-clr)] text-white font-nexa px-5 py-2 rounded-full text-sm mb-5 shadow-lg">
+    <section ref={sectionRef} className="py-16 md:py-16 lg:py-24 px-6 md:px-12 lg:px-20 bg-[var(--section-bg-clr)]">
+      <div className="max-w-7xl mx-auto text-center mb-8 md:mb-16">
+        <h2 className="inline-block bg-[var(--text-hover-clr)] text-white font-nexa px-5 py-1 md:py-2 rounded-full text-sm mb-5 shadow-lg">
           Our Mission & Achievements
         </h2>
-        <h3 className="text-4xl md:text-5xl font-cormorant font-semibold text-[var(--text-clr)]">
+        <h3 className="text-3xl md:text-4xl lg:text-5xl font-cormorant font-bold text-[var(--text-clr)]">
           Craftorium: Empowering Creators, Achieving Milestones
         </h3>
-        <p className="text-lg md:text-xl font-nexa text-[var(--text-clr)] mt-4 max-w-2xl mx-auto">
+        <p className="text-md md:text-lg lg:text-xl font-nexa text-[var(--text-clr)] mt-4 max-w-2xl mx-auto">
           At Craftorium, we provide a trusted multivendor marketplace where creativity meets opportunity. Here's what we have achieved so far:
         </p>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-12 max-w-7xl mx-auto text-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
         {achievements.map((item, idx) => (
           <div
             key={item.id}

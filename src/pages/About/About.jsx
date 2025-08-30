@@ -3,6 +3,7 @@ import HowWeWork from "./AboutUsComponants/HowWeWork";
 import WhoWeAre from "./AboutUsComponants/WhoWeAre";
 import OurMission from "./AboutUsComponants/OurMission";
 import WhyChooseUs from "./AboutUsComponants/WhyChooseUs";
+import AbtCTA from "./AboutUsComponants/AbtCTA";
 
 
 
@@ -14,6 +15,7 @@ export default function About() {
       <HowWeWork/>
       <OurMission/>
       <WhyChooseUs/>
+      <AbtCTA/>
     
     </div>
   );

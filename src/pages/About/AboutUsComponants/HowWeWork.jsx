@@ -25,22 +25,22 @@ export default function HowWeWork() {
   ];
 
   return (
-    <section className="py-16 px-4 md:px-8 lg:px-12 xl:px-16 bg-[var(--section-bg-clr)]">
+    <section className="py-4 md:py-12 lg:py-16 px-4 md:px-8 lg:px-12 xl:px-16 bg-[var(--section-bg-clr)]">
       <div className="text-center mb-16">
-        <h2 className="inline-block bg-[var(--text-hover-clr)] text-white font-nexa px-5 py-2 rounded-full text-sm mb-5 shadow-lg">
+        <h2 className="inline-block bg-[var(--text-hover-clr)] text-white font-nexa px-5 py-1.5 md:py-2 rounded-full text-sm mb-5 shadow-lg">
           How We Work
         </h2>
-        <h3 className="text-4xl md:text-5xl font-cormorant font-semibold text-[var(--text-clr)]">
+        <h3 className="text-4xl md:text-4xl lg:text-5xl font-cormorant font-bold text-[var(--text-clr)]">
           Simple Steps to Get Started
         </h3>
-        <p className="text-lg md:text-xl font-nexa text-[var(--text-clr)] mt-4 max-w-2xl mx-auto">
+        <p className="text-md md:text-lg lg:text-xl font-nexa text-[var(--text-clr)] mt-4 max-w-2xl mx-auto">
           Craftorium connects creators and buyers seamlessly. Here’s how you can join our multivendor platform and start your creative journey.
         </p>
       </div>
       <div className="relative max-w-5xl mx-auto">
         <div className="hidden md:block absolute top-0 left-1/2 transform -translate-x-1/2 w-1 bg-[var(--text-hover-clr)] h-full z-0"></div>
 
-        <div className="flex flex-col space-y-16">
+        <div className="flex flex-col space-y-8 md:space-y-12 lg:space-y-16">
           {steps.map((step, index) => (
             <motion.div
               key={step.id}
