@@ -30,7 +30,6 @@ export default function ContactHero() {
         >
           Contact Us
         </button>
-        <div className="absolute bottom-8 right-10 w-24 h-24 rounded-full bg-[var(--text-clr)]/30 hidden md:block animate-pulse"></div>
       </div>
     </section>
   );

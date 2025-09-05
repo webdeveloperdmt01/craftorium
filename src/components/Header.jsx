@@ -25,7 +25,7 @@ export default function Header() {
     <header className="bg-[#fef6eb] relative font-nexa">
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between px-4 md:px-8 lg:px-8 xl:px-24 py-1">
         <div className="flex items-center justify-between w-full lg:w-auto">
-         <a href="/"> <img src={logo} alt="Logo" className="h-20 w-auto" /></a>
+          <a href="/"> <img src={logo} alt="Logo" className="h-20 w-auto" /></a>
           <button
             className="lg:hidden text-[var(--text-clr)]"
             onClick={() => setIsOpen(!isOpen)}
@@ -35,9 +35,8 @@ export default function Header() {
         </div>
 
         <nav
-          className={`${
-            isOpen ? "flex" : "hidden"
-          } flex-col lg:flex lg:flex-row lg:space-x-6 xl:space-x-10 text-md lg:text-lg xl:text-xl font-semibold text-[var(--text-clr)] mt-4 lg:mt-0 space-y-2 md:space-y-0`}
+          className={`${isOpen ? "flex" : "hidden"
+            } flex-col lg:flex lg:flex-row lg:space-x-6 xl:space-x-10 text-md lg:text-lg xl:text-xl font-semibold text-[var(--text-clr)] mt-4 lg:mt-0 space-y-2 md:space-y-0`}
         >
           <Link to="/" className="hover:text-[var(--text-hover-clr)]">
             Home
@@ -51,14 +50,14 @@ export default function Header() {
               window.innerWidth >= 1024 && (setIsShopOpen(false), setIsSubShopOpen(false))
             }
           >
-            <button
+            <Link to="/shop"
               onClick={() =>
                 window.innerWidth < 1024 && setIsShopOpen(!isShopOpen)
               }
               className="flex items-center hover:text-[var(--text-hover-clr)]"
             >
               Shop <FaChevronDown size={16} className="ml-1" />
-            </button>
+            </Link>
             {isShopOpen && (
               <div className="absolute left-0 top-full mt-0 lg:w-52 bg-[#fef6eb] border rounded-lg shadow-lg z-50 text-[16px]">
                 <div
@@ -81,7 +80,7 @@ export default function Header() {
                   </button>
 
                   {isSubShopOpen && (
-                    <div className="absolute left-46 top-6 ml-0 mt-0 w-40 bg-[#fef6eb] border rounded-lg shadow-lg">
+                    <div className="absolute left-28 md:left-28 lg:left-46 top-6 ml-0 mt-0 w-40 bg-[#fef6eb] border rounded-lg shadow-lg">
                       <Link
                         to="/shop/men"
                         className="block px-2 py-1 text-sm hover:bg-gray-100 rounded"
@@ -135,9 +134,8 @@ export default function Header() {
         </nav>
 
         <div
-          className={`${
-            isOpen ? "flex mt-4" : "hidden"
-          } lg:flex items-center space-x-4 mb-4 md:mb-0`}
+          className={`${isOpen ? "flex mt-4" : "hidden"
+            } lg:flex items-center space-x-4 mb-4 md:mb-0`}
         >
           <div className="flex items-center border-2 border-[var(--text-hover-clr)] rounded-full px-5 py-1 w-full lg:w-auto">
             <input

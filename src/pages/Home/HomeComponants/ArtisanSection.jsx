@@ -107,7 +107,7 @@ export default function ArtisanSection() {
                     <h3 className="font-nexa text-lg md:text-xl font-semibold text-[var(--text-hover-clr)]">
                       {artisan.name}
                     </h3>
-                    <p className="text-sm text-gray-500">{artisan.craft}</p>
+                    <p className="text-sm text-gray-500 font-nexa">{artisan.craft}</p>
                   </div>
                 </div>
               </div>

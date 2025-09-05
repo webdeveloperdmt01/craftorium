@@ -36,7 +36,7 @@ const ArtisanalElegance = () => {
           />
         </div>
         <div className="font-nexa absolute md:bottom-12 lg:bottom-24 bottom-3 left-3 md:-left-26 lg:-left-22 xl:left-28 bg-white px-6 py-3 rounded-lg text-lg shadow-md font-medium text-gray-600">
-          Beige Textile
+          {StrinConstants.beigeTextile}
         </div>
       </div>
       

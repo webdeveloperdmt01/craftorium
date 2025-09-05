@@ -136,7 +136,7 @@ export default function ArtisanStories() {
   if (!artisan) return <p className="p-10 text-center text-red-500">Artisan not found</p>;
 
   return (
-    <section className="px-4 md:px-8 lg:px-16 xl:px-24 py-16">
+    <section className="bg-[#fef6eb] px-4 md:px-8 lg:px-16 xl:px-24 py-16">
       <button
         onClick={() => navigate(-1)}
         className="font-cormorant mb-8 flex items-center gap-2 text-[var(--text-clr)] hover:text-[var(--text-hover-clr)] font-medium transition"
